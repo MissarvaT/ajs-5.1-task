@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable no-plusplus */
 export default function orderByProps(obj, orderArray) {
   const result = [];
@@ -6,6 +7,7 @@ export default function orderByProps(obj, orderArray) {
     const newObj = { key, value: obj[key] };
     result.push(newObj);
   }
+  // eslint-disable-next-line array-callback-return
   result.sort((a, b) => {
     if (a.key > b.key) {
       return 1;
